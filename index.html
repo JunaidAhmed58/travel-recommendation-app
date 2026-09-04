@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Recommendation System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">Travel Explorer</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Enter beach, temple, or country...">
+            <button id="btnSearch" onclick="searchPlaces()">Search</button>
+            <button id="btnClear" onclick="clearResults()">Clear</button>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h1>Explore Your Dream Destinations</h1>
+            <p>Welcome to Travel Explorer! Discover breathtaking beaches, historic temples, and vibrant countries tailored to your travel desires.</p>
+        </div>
+    </section>
+
+    <!-- Search Results Section -->
+    <section id="results" class="results-section">
+        <div id="resultsContainer" class="cards-container"></div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about-section">
+        <h2>About Us</h2>
+        <p>At Travel Explorer, we are dedicated to helping travelers discover the most beautiful places around the world. Our mission is to provide tailored travel recommendations based on your unique preferences.</p>
+        <div class="team-container">
+            <div class="team-card">
+                <h3>John Doe</h3>
+                <p>Lead Developer</p>
+            </div>
+            <div class="team-card">
+                <h3>Jane Smith</h3>
+                <p>UI/UX Designer</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <form id="contactForm" onsubmit="event.preventDefault(); alert('Message sent!');">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required placeholder="Your Name">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required placeholder="Your Email">
+
+            <label for="message">Message:</label>
+            <textarea id="message" rows="4" required placeholder="Your Message"></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <script src="travel_recommendation.js"></script>
+</body>
+</html>
